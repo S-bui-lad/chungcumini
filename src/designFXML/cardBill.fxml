@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="1162.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cardBillController">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1162.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane fx:id="formGridPane" gridLinesVisible="true" prefHeight="50.0" prefWidth="1157.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="146.39999389648438" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="416.80000610351567" minWidth="0.0" prefWidth="235.80000000000004" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.00004882812505" minWidth="10.0" prefWidth="231.19996337890632" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="370.4000244140625" minWidth="10.0" prefWidth="276.8000366210938" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.20001220703125" minWidth="10.0" prefWidth="268.80002441406236" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="48.0" prefWidth="163.0">
+                     <children>
+                        <AnchorPane layoutX="-45.0" layoutY="-73.0" prefHeight="48.0" prefWidth="140.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button layoutX="22.0" layoutY="7.0" mnemonicParsing="false" onAction="#PrintPDF" prefHeight="34.0" prefWidth="40.0" styleClass="add-btn" stylesheets="@../designCSS/MainCSS.css">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="20" />
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="84.0" layoutY="7.0" mnemonicParsing="false" onAction="#deleteBillForm" prefHeight="34.0" prefWidth="40.0" styleClass="delete-btn" stylesheets="@../designCSS/MainCSS.css">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="REMOVE" size="20" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="HomeTownIDLabel" alignment="CENTER" prefHeight="34.0" prefWidth="321.0" text="Nhà A" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="RoomIDLabel" alignment="CENTER" prefHeight="34.0" prefWidth="386.0" text="Phòng A201" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="invoiceDatePicker" editable="false" prefHeight="34.0" prefWidth="258.0" style="-fx-font-size: 19;" GridPane.columnIndex="3" />
+                  <Label fx:id="billPriceLabel" alignment="CENTER" prefHeight="34.0" prefWidth="263.0" text="0 đ " GridPane.columnIndex="4">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

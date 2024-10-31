@@ -1,0 +1,125 @@
+.gradient-side-form{
+    -fx-background-color: linear-gradient(to bottom right, #0f6789, #286155);
+}
+.more-btn{
+	-fx-background-color: linear-gradient(to bottom right, #f7dc46, #f5c047); 
+    -fx-cursor: hand;
+    -fx-text-fill: #000;
+}
+
+.more-btn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #fff090, #ffe17e); 
+}
+.function-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-border-width: 1px;
+}
+.function-btn:hover{
+    -fx-border-color: #fff;
+}
+
+.logout-btn{
+	-fx-background-color: #1ebc8f;
+	-fx-padding: 7px;
+	-fx-background-radius: 50px;
+	-fx-cursor: hand;
+}
+.logout-btn:hover{
+	-fx-background-color: #cc3b3b;
+}
+.white-form{
+	-fx-background-color: #fff;
+}
+.shadow-to-form{
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
+}
+.radius{
+	-fx-background-radius: 8px;
+}
+.table-view{
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: linear-gradient(to bottom right, #0f6789, #286155);
+    -fx-border-radius: 5px;
+    -fx-border-width: 1.5px;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom right, #0f6789, #286155);
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-background-insets: 0 0 0 0;
+}
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+}
+.btn{
+    -fx-background-color: linear-gradient(to bottom right, #098c53, #246861); 
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    
+}
+.btn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #0fb565, #399a8f); 
+}
+
+.add-btn{
+    -fx-background-color:   #1f9c9a; 
+    -fx-cursor: hand;
+}
+.add-btn:hover{
+    -fx-background-color: #16b6bf;
+}
+
+.print-btn{
+    -fx-background-color: #1f9c9a; 
+    -fx-cursor: hand;
+}
+.print-btn:hover{
+    -fx-background-color: #16b6bf;
+}
+
+.update-btn{
+    -fx-background-color:     #119675; 
+    -fx-cursor: hand;
+}
+.update-btn:hover{
+    -fx-background-color: #17ae5b;
+}
+
+.erase-btn{
+    -fx-background-color:  #eaac30; 
+    -fx-cursor: hand;
+}
+.erase-btn:hover{
+    -fx-background-color: #ffac6d;
+}
+
+.delete-btn{
+    -fx-background-color:  #f76666;
+    -fx-cursor: hand;
+}
+.delete-btn:hover{
+    -fx-background-color: #ff9d9d;
+}
+
+.print-btn{
+    -fx-background-color:  #f76666;
+    -fx-cursor: hand;
+}
+.print-btn:hover{
+    -fx-background-color: #ff9d9d;
+}
+
+.date-picker .text-field {
+    -fx-font-size: 15; 
+}
+.InputControll {
+	-fx-background-color: white;
+	-fx-border-color: #1a7f91;
+}
+	

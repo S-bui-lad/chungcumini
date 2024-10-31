@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.calculateBillController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="18.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="663.0" stylesheets="@../designCSS/MainCSS.css">
+                     <styleClass>
+                        <String fx:value="shadow-to-form" />
+                        <String fx:value="white-form" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="543.0" layoutY="17.0" mnemonicParsing="false" onAction="#calculate" prefHeight="34.0" prefWidth="83.0" styleClass="add-btn" stylesheets="@../designCSS/MainCSS.css" text="  Tính" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="439.0" layoutY="17.0" mnemonicParsing="false" onAction="#CloseStage" prefHeight="34.0" prefWidth="83.0" styleClass="delete-btn" stylesheets="@../designCSS/MainCSS.css" text=" Đóng" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="REMOVE" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="29.0" layoutY="70.0" prefHeight="0.0" prefWidth="598.0" />
+                        <AnchorPane layoutX="30.0" layoutY="83.0" prefHeight="42.0" prefWidth="167.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: black; -fx-background-color: #b1dfe4;">
+                           <children>
+                              <Label layoutX="21.0" layoutY="5.0" prefHeight="34.0" prefWidth="96.0" text="ID tài khoản:" textFill="#0f8686">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="IdAccountLabel" layoutX="117.0" layoutY="5.0" prefHeight="34.0" prefWidth="40.0" text="&lt;ID&gt;" textFill="#f20d0d">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="83.0" layoutY="14.0" text="Tính tiền phòng" textFill="#0f8686">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView fill="#0f8686" glyphName="CALCULATOR" layoutX="36.0" layoutY="44.0" size="30" />
+                        <AnchorPane layoutX="36.0" layoutY="139.0" prefHeight="306.0" prefWidth="598.0">
+                           <children>
+                              <Label layoutX="106.0" layoutY="176.0" text="Phòng" textFill="#0f8686">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="105.0" layoutY="98.0" text="Mã tòa" textFill="#0f8686">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="110.0" layoutY="256.0" text="Ngày " textFill="#0f8686">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="invoiceDatePicker" layoutX="205.0" layoutY="246.0" prefHeight="42.0" prefWidth="235.0" style="-fx-background-color: white; -fx-border-color: #108176;" />
+                              <Label layoutX="103.0" layoutY="24.0" text="Số điện " textFill="#0f8686">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="electricNumberTextField" alignment="CENTER" layoutX="205.0" layoutY="14.0" prefHeight="41.0" prefWidth="235.0" promptText="Nhập số điện" style="-fx-background-color: white; -fx-border-color: #108176;">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </TextField>
+                              <ChoiceBox fx:id="roomChoiceBox" layoutX="205.0" layoutY="166.0" prefHeight="42.0" prefWidth="235.0" style="-fx-border-color: #108176; -fx-background-color: white;" />
+                              <ChoiceBox fx:id="HomeTownChoiceBox" layoutX="205.0" layoutY="88.0" prefHeight="42.0" prefWidth="235.0" style="-fx-border-color: #108176; -fx-background-color: white;" />
+                              <FontAwesomeIconView fill="#0f8686" glyphName="BOLT" layoutX="87.0" layoutY="41.0" size="19" />
+                              <FontAwesomeIconView fill="#0f8686" glyphName="HASHTAG" layoutX="82.0" layoutY="115.0" size="17" />
+                              <FontAwesomeIconView fill="#0f8686" glyphName="CALENDAR" layoutX="84.0" layoutY="272.0" size="17" />
+                              <FontAwesomeIconView fill="#0f8686" glyphName="HOME" layoutX="82.0" layoutY="193.0" size="18" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

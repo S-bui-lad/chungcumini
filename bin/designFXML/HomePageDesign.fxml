@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="750.4" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="750.0" prefWidth="227.0" styleClass="gradient-side-form" stylesheets="@../designCSS/MainCSS.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="139.0" fitWidth="128.0" layoutX="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imageIcon/miniA2.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="-2.0" layoutY="128.0" prefHeight="26.0" prefWidth="229.0" text="Quản Lý Chung Cư Mini" textFill="WHITE">
+                           <font>
+                              <Font name="Candara" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="173.0" prefHeight="62.0" prefWidth="214.0" style="-fx-background-color: white; -fx-background-radius: 50;" />
+                        <FontAwesomeIconView fill="#0f8684" glyphName="USER_CIRCLE" layoutX="14.0" layoutY="218.0" size="40" />
+                        <Label layoutX="65.0" layoutY="184.0" text="Xin chào!" textFill="#137b9e">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountNameLabel" layoutX="65.0" layoutY="204.0" prefHeight="20.0" prefWidth="138.0" text="&lt;username&gt;" />
+                        <Button fx:id="HomeButton" alignment="BASELINE_LEFT" layoutY="277.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Trang chủ">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="RoomButton" alignment="BASELINE_LEFT" layoutY="338.0" mnemonicParsing="false" onAction="#OpenRoomForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Phòng">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="24" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="TenantButton" alignment="BASELINE_LEFT" layoutY="398.0" mnemonicParsing="false" onAction="#OpenTenantForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Khách">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ServiceButton" alignment="BASELINE_LEFT" layoutY="459.0" mnemonicParsing="false" onAction="#OpenServiceForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Dịch vụ">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CUBES" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="BillButton" alignment="BASELINE_LEFT" layoutY="521.0" mnemonicParsing="false" onAction="#OpenBillForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="     Hóa đơn">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILE" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="StatisticsButton" alignment="BASELINE_LEFT" layoutY="583.0" mnemonicParsing="false" onAction="#OpenStatisticsForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Thống kê">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="LogoutButton" layoutX="14.0" layoutY="706.0" mnemonicParsing="false" onAction="#Logout" styleClass="logout-btn" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="9.999999999999979" AnchorPane.leftAnchor="14.0">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SIGN_OUT" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="65.0" layoutY="710.0" text="Đăng xuất" textFill="WHITE" AnchorPane.bottomAnchor="13.199999999999978" AnchorPane.leftAnchor="65.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Line endX="181.7999725341797" layoutX="48.0" layoutY="162.0" startX="-47.0000114440918" stroke="WHITE" />
+                        <Line endX="124.40000915527344" layoutX="106.0" layoutY="247.0" startX="-106.00001525878906" stroke="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="HomePageForm" layoutX="-1.0" prefHeight="750.4" prefWidth="1270.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="1241.0" AnchorPane.leftAnchor="13.600000000000136" AnchorPane.rightAnchor="13.200000000000045" AnchorPane.topAnchor="14.0">
+                                 <children>
+                                    <ScrollPane layoutX="-3.0" prefHeight="200.0" prefWidth="1244.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.599999999999909" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="1398.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="161.0" prefWidth="286.0" stylesheets="@../designCSS/MainCSS.css">
+                                                   <styleClass>
+                                                      <String fx:value="gradient-side-form" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="BUILDING" layoutX="26.0" layoutY="103.0" size="70" />
+                                                      <Label layoutX="86.0" layoutY="117.0" prefHeight="30.0" prefWidth="161.0" text="Tổng số tòa nhà" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="numberTownLabel" layoutX="198.0" layoutY="11.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="43.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="332.0" layoutY="12.0" prefHeight="161.0" prefWidth="286.0" stylesheets="@../designCSS/MainCSS.css">
+                                                   <styleClass>
+                                                      <String fx:value="gradient-side-form" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <Label layoutX="88.0" layoutY="117.0" prefHeight="30.0" prefWidth="161.0" text="Tổng số phòng" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="HOME" layoutX="14.0" layoutY="106.0" size="80" />
+                                                      <Label fx:id="numberRoomLabel" layoutX="199.0" layoutY="14.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="43.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="647.0" layoutY="12.0" prefHeight="161.0" prefWidth="286.0" stylesheets="@../designCSS/MainCSS.css">
+                                                   <styleClass>
+                                                      <String fx:value="gradient-side-form" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <Label fx:id="numberTenantLabel" layoutX="203.0" layoutY="14.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="43.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="89.0" layoutY="116.0" prefHeight="30.0" prefWidth="161.0" text="Tổng số khách" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="106.0" size="70" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="965.0" layoutY="12.0" prefHeight="161.0" prefWidth="286.0" stylesheets="@../designCSS/MainCSS.css">
+                                                   <styleClass>
+                                                      <String fx:value="gradient-side-form" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <Label fx:id="numberServiceLabel" layoutX="205.0" layoutY="14.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="43.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="79.0" layoutY="116.0" prefHeight="30.0" prefWidth="161.0" text="Tổng số dịch vụ" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="STAR" layoutX="14.0" layoutY="106.0" size="70" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <Separator layoutX="14.0" layoutY="228.0" prefHeight="3.0" prefWidth="1238.0" />
+                              <AnchorPane layoutX="809.0" layoutY="244.0" prefHeight="490.0" prefWidth="442.0" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="809.0" AnchorPane.rightAnchor="16.800000000000068" AnchorPane.topAnchor="244.0">
+                                 <styleClass>
+                                    <String fx:value="white-form" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow-to-form" />
+                                 </styleClass>
+                                 <children>
+                                    <PieChart fx:id="RoomPieChart" labelsVisible="false" layoutX="65.0" layoutY="190.0" legendVisible="false" prefHeight="280.0" prefWidth="314.0" AnchorPane.bottomAnchor="24.399999999999977" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="190.0" />
+                                    <Separator layoutX="36.0" layoutY="76.0" prefHeight="0.0" prefWidth="740.0" AnchorPane.leftAnchor="36.000000000000114" AnchorPane.rightAnchor="36.000000000000114" />
+                                    <Label layoutX="88.0" layoutY="16.0" text="Trạng thái phòng" textFill="#0c8144">
+                                       <font>
+                                          <Font name="System Bold" size="33.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#0c8144" glyphName="PIE_CHART" layoutX="36.0" layoutY="55.0" size="40" />
+                                    <Label alignment="CENTER" layoutX="38.0" layoutY="99.0" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 100; -fx-background-color: black; -fx-background-color: #169e65;" text="Phòng trống" textFill="WHITE">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="279.0" layoutY="98.0" prefHeight="34.0" prefWidth="126.0" style="-fx-background-radius: 100; -fx-background-color: #056960;" text="Đã thuê" textFill="WHITE">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="emptyPercentLabel" layoutX="76.0" layoutY="139.0" text="0%" textFill="#07463b">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="rentedPercentLabel" layoutX="319.0" layoutY="138.0" text="0%" textFill="#07463b">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="20.0" layoutY="243.0" prefHeight="491.0" prefWidth="767.0" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="16.19999999999999" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="243.2">
+                                 <styleClass>
+                                    <String fx:value="white-form" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow-to-form" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="99.0" layoutY="14.0" text="Gói tài khoản" textFill="#0c8144">
+                                       <font>
+                                          <Font name="System Bold" size="33.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="35.0" layoutY="78.0" prefHeight="3.0" prefWidth="698.0" AnchorPane.leftAnchor="35.200000000000045" AnchorPane.rightAnchor="33.0" />
+                                    <FontAwesomeIconView fill="#0c8144" glyphName="ID_CARD" layoutX="35.0" layoutY="51.0" size="35" />
+                                    <Label layoutX="35.0" layoutY="93.0" text="Gói đang sử dụng:" textFill="#177958">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="namePackServiceLabel" layoutX="240.0" layoutY="93.0" text="Label">
+                                       <font>
+                                          <Font name="System Bold Italic" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fx:id="iconPack" layoutX="212.0" layoutY="113.0" size="17" />
+                                    <Button alignment="BASELINE_LEFT" layoutX="635.0" layoutY="21.0" mnemonicParsing="false" onAction="#upgradePack" prefHeight="34.0" prefWidth="98.0" styleClass="update-btn" stylesheets="@../designCSS/MainCSS.css" text=" Nâng gói" textFill="WHITE" AnchorPane.rightAnchor="33.80000000000007">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_UP" />
+                                       </graphic>
+                                    </Button>
+                                    <AnchorPane fx:id="thanksForm" layoutX="25.0" layoutY="161.0" prefHeight="316.0" prefWidth="713.0" style="-fx-border-radius: 70; -fx-background-radius: 70; -fx-border-color: #0c8144; -fx-background-color: #cbf2e4;">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../imageIcon/ribbon.png" />
+                                             </image>
+                                             <effect>
+                                                <ColorAdjust brightness="0.1" contrast="-0.82" hue="1.0" saturation="1.0" />
+                                             </effect>
+                                          </ImageView>
+                                          <Label layoutX="197.0" layoutY="14.0" text="Big Thank You" textFill="#15695e">
+                                             <font>
+                                                <Font name="Brush Script MT Italic" size="55.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fill="#114953" layoutX="154.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xin chân thành cảm ơn quý khách đã tin tưởng và sử dụng">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Line endX="314.7999267578125" endY="-1.52587890625E-5" layoutX="254.0" layoutY="176.0" startX="-100.0" stroke="#13615b" />
+                                          <Text fill="#114953" layoutX="154.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phần mềm Quản lý chung cư Mini. Chúng tôi luôn sẵn sàng">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Line endX="314.7999267578125" endY="-1.52587890625E-5" layoutX="254.0" layoutY="221.0" startX="-100.0" stroke="#13615b" />
+                                          <Text fill="#114953" layoutX="154.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="lắng nghe mọi ý kiến, đóng góp, phản hồi từ quý khách">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Line endX="314.7999267578125" endY="-1.52587890625E-5" layoutX="254.0" layoutY="265.0" startX="-100.0" stroke="#13615b" />
+                                          <FontAwesomeIconView fill="#2c8091" glyphName="HEART" layoutX="550.0" layoutY="257.0" size="18" text="" />
+                                          <Line endX="231.5999755859375" layoutX="291.0" layoutY="133.0" startX="-100.0" stroke="#13615b" />
+                                          <Text fill="#114953" layoutX="191.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chào ">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="nameAccountText" fill="#114953" layoutX="232.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Tên người dùng&gt;">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Text>
+                                       </children></AnchorPane>
+                                    <Button alignment="BASELINE_LEFT" layoutX="522.0" layoutY="21.0" mnemonicParsing="false" onAction="#showPack" prefHeight="34.0" prefWidth="98.0" styleClass="add-btn" stylesheets="@../designCSS/MainCSS.css" text=" Xem gói" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="EYE" />
+                                       </graphic>
+                                    </Button>
+                                    <AnchorPane fx:id="PackAnchorPane" layoutX="12.0" layoutY="141.0" prefHeight="318.0" prefWidth="743.0" style="-fx-border-color: black; -fx-background-radius: 70; -fx-border-radius: 70; -fx-background-color: #ceecec;" visible="false">
+                                       <children>
+                                          <ImageView fitHeight="184.0" fitWidth="738.0" layoutX="7.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../imageIcon/DichVuTaiKhoan.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="186.0" layoutY="34.0" prefHeight="31.0" prefWidth="370.0" text="BẢNG GIÁ GÓI DỊCH VỤ TÀI KHOẢN" textFill="#117481">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="backButton" alignment="BASELINE_LEFT" layoutX="408.0" layoutY="21.0" mnemonicParsing="false" onAction="#Back" prefHeight="34.0" prefWidth="98.0" styleClass="erase-btn" stylesheets="@../designCSS/MainCSS.css" text=" Quay về" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="REPLY" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

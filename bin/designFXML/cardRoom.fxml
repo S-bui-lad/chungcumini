@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="280.0" stylesheets="@../designCSS/MainCSS.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cardRoomController">
+   <children>
+      <FontAwesomeIconView fill="#0c7381" glyphName="HOME" layoutX="14.0" layoutY="39.0" size="30" />
+      <Label layoutX="76.0" layoutY="112.0" text="PHÒNG" textFill="#0d8664">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomIDLabel" layoutX="157.0" layoutY="112.0" text="&lt;&gt;" textFill="#0d8664">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="176.0" text="Trạng thái:" textFill="#0d8664">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="stateroomLabel" layoutX="104.0" layoutY="176.0" text="&lt;tt&gt;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceroomLable" layoutX="63.0" layoutY="202.0" text="&lt;gp&gt;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="addTenantButton" alignment="BASELINE_LEFT" layoutX="16.0" layoutY="51.0" mnemonicParsing="false" onAction="#addTenant" prefHeight="37.0" prefWidth="115.0" styleClass="btn" stylesheets="@../designCSS/MainCSS.css" text="Thêm khách">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="14.0" layoutY="96.0" prefHeight="4.0" prefWidth="250.0" />
+      <Label layoutX="25.0" layoutY="150.0" text="Loại phòng:" textFill="#0d8664">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="typeroomLabel" layoutX="114.0" layoutY="150.0" text="&lt;tt&gt;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="showTenantButton" alignment="BASELINE_LEFT" layoutX="16.0" layoutY="51.0" mnemonicParsing="false" onAction="#showTenant" prefHeight="37.0" prefWidth="115.0" styleClass="more-btn" stylesheets="@../designCSS/MainCSS.css" text=" Xem khách" visible="false">
+         <graphic>
+            <FontAwesomeIconView glyphName="EYE" />
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView fill="#0d8664" glyphName="MONEY" layoutX="28.0" layoutY="222.0" size="20" />
+   </children>
+   <styleClass>
+      <String fx:value="white-form" />
+      <String fx:value="radius" />
+      <String fx:value="shadow-to-form" />
+   </styleClass>
+</AnchorPane>

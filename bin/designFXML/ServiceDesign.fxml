@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="750.4" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="750.0" prefWidth="227.0" styleClass="gradient-side-form" stylesheets="@../designCSS/MainCSS.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="139.0" fitWidth="128.0" layoutX="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imageIcon/miniA2.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="-2.0" layoutY="128.0" prefHeight="26.0" prefWidth="229.0" text="Quản Lý Chung Cư Mini" textFill="WHITE">
+                           <font>
+                              <Font name="Candara" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="173.0" prefHeight="62.0" prefWidth="214.0" style="-fx-background-color: white; -fx-background-radius: 50;" />
+                        <FontAwesomeIconView fill="#0f8684" glyphName="USER_CIRCLE" layoutX="14.0" layoutY="218.0" size="40" />
+                        <Label layoutX="65.0" layoutY="184.0" text="Xin chào!" textFill="#137b9e">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountNameLabel" layoutX="65.0" layoutY="204.0" prefHeight="18.0" prefWidth="149.0" text="&lt;username&gt;" />
+                        <Button fx:id="HomeButton" alignment="BASELINE_LEFT" layoutY="277.0" mnemonicParsing="false" onAction="#OpenHomePageForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Trang chủ">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="RoomButton" alignment="BASELINE_LEFT" layoutY="338.0" mnemonicParsing="false" onAction="#OpenRoomForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Phòng">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="24" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="TenantButton" alignment="BASELINE_LEFT" layoutY="398.0" mnemonicParsing="false" onAction="#OpenTenantForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Khách">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ServiceButton" alignment="BASELINE_LEFT" layoutY="459.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Dịch vụ">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CUBES" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="BillButton" alignment="BASELINE_LEFT" layoutY="521.0" mnemonicParsing="false" onAction="#OpenBillForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="     Hóa đơn">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILE" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="StatisticsButton" alignment="BASELINE_LEFT" layoutY="583.0" mnemonicParsing="false" onAction="#OpenStatisticsForm" prefHeight="46.0" prefWidth="230.0" styleClass="function-btn" stylesheets="@../designCSS/MainCSS.css" text="   Thống kê">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="LogoutButton" layoutX="14.0" layoutY="706.0" mnemonicParsing="false" onAction="#Logout" styleClass="logout-btn" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="9.999999999999979" AnchorPane.leftAnchor="14.0">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SIGN_OUT" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="65.0" layoutY="710.0" text="Đăng xuất" textFill="WHITE" AnchorPane.bottomAnchor="13.199999999999978" AnchorPane.leftAnchor="65.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Line endX="181.7999725341797" layoutX="48.0" layoutY="162.0" startX="-47.0000114440918" stroke="WHITE" />
+                        <Line endX="124.40000915527344" layoutX="106.0" layoutY="247.0" startX="-106.00001525878906" stroke="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="255.0" layoutY="256.0" prefHeight="750.4" prefWidth="1268.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="36.0" layoutY="33.0" prefHeight="686.0" prefWidth="1195.0" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="31.200000000000045" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.799999999999955" AnchorPane.topAnchor="33.0">
+                                 <styleClass>
+                                    <String fx:value="shadow-to-form" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-form" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="73.0" layoutY="20.0" text="Danh sách dịch vụ" textFill="#188463">
+                                       <font>
+                                          <Font name="Arial Bold" size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="1.0" layoutY="78.0" prefHeight="1.0" prefWidth="1194.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.599999999999909" />
+                                    <FontAwesomeIconView fill="#188463" glyphName="CLIPBOARD" layoutX="22.0" layoutY="53.0" size="35" />
+                                    <Button alignment="BASELINE_LEFT" layoutX="704.0" layoutY="23.0" mnemonicParsing="false" onAction="#addService" prefHeight="34.0" prefWidth="102.0" styleClass="add-btn" stylesheets="@../designCSS/MainCSS.css" text="   Thêm" textFill="WHITE" AnchorPane.rightAnchor="388.80000000000007">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="827.0" layoutY="23.0" mnemonicParsing="false" onAction="#updateService" prefHeight="34.0" prefWidth="102.0" styleClass="update-btn" stylesheets="@../designCSS/MainCSS.css" text=" Cập nhật" textFill="WHITE" AnchorPane.rightAnchor="265.80000000000007">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="WRENCH" />
+                                       </graphic>
+                                    </Button>
+                                    <Button alignment="BASELINE_LEFT" layoutX="949.0" layoutY="23.0" mnemonicParsing="false" onAction="#eraseServiceInTextField" prefHeight="34.0" prefWidth="102.0" styleClass="erase-btn" stylesheets="@../designCSS/MainCSS.css" text="    Tẩy" textFill="WHITE" AnchorPane.rightAnchor="143.79999999999995">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="ERASER" />
+                                       </graphic>
+                                    </Button>
+                                    <Button alignment="BASELINE_LEFT" layoutX="1071.0" layoutY="23.0" mnemonicParsing="false" onAction="#deleteService" prefHeight="34.0" prefWidth="102.0" styleClass="delete-btn" stylesheets="@../designCSS/MainCSS.css" text="    Xóa" textFill="WHITE" AnchorPane.rightAnchor="21.799999999999955">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="TIMES_CIRCLE" />
+                                       </graphic>
+                                    </Button>
+                                    <TableView fx:id="ServiceTableView" layoutX="60.0" layoutY="172.8" onMouseClicked="#viewService" prefHeight="246.0" prefWidth="1078.0" style="-fx-font-size: 15; -fx-cursor: hand;" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="173.0">
+                                       <columns>
+                                          <TableColumn fx:id="ordinalService" resizable="false" text="STT" />
+                                          <TableColumn fx:id="HomeTownID_col" prefWidth="166.4000244140625" resizable="false" text="Mã tòa" />
+                                          <TableColumn fx:id="ServiceID_col" prefWidth="156.0" resizable="false" text="Mã dịch vụ" />
+                                          <TableColumn fx:id="NameService_col" prefWidth="268.800048828125" resizable="false" text="Tên dịch vụ" />
+                                          <TableColumn fx:id="TypeService_col" prefWidth="180.0" resizable="false" text="Loại dịch vụ" />
+                                          <TableColumn fx:id="PriceService_col" prefWidth="275.2000732421875" resizable="false" text="Giá dịch vụ (VND)" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="26.0" layoutY="110.0" prefHeight="20.0" prefWidth="93.0" text="Chọn tòa nhà:" textFill="#0d7355">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="chooseTownComboBox" layoutX="133.0" layoutY="101.0" prefHeight="38.0" prefWidth="499.0" promptText="Chọn tòa nhà" style="-fx-border-color: #106e66; -fx-font-size: 15;" AnchorPane.leftAnchor="132.8" AnchorPane.rightAnchor="563.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ComboBox>
+                                    <Button alignment="BASELINE_LEFT" layoutX="664.0" layoutY="103.0" mnemonicParsing="false" onAction="#showServiceOfTown" prefHeight="34.0" prefWidth="79.0" styleClass="btn" stylesheets="@../designCSS/MainCSS.css" text=" Xem" AnchorPane.rightAnchor="452.00000000000006">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="20" />
+                                       </graphic>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="130.0" layoutY="524.0" prefHeight="22.0" prefWidth="90.0" text="Mã dịch vụ *" textFill="#127357" AnchorPane.bottomAnchor="139.99999999999997">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ServiceNameTextField" layoutX="243.0" layoutY="584.0" prefHeight="39.0" prefWidth="279.0" promptText="Nhập tên dịch vụ" styleClass="InputControll" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="63.19999999999993">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="663.0" layoutY="524.0" text="Giá dịch vụ *" textFill="#127357" AnchorPane.bottomAnchor="140.79999999999998" AnchorPane.rightAnchor="452.20000000000005">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="129.0" layoutY="593.0" prefHeight="22.0" prefWidth="91.0" text="Tên dịch vụ *" textFill="#127357" AnchorPane.bottomAnchor="70.99999999999997">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ServicePriceTextField" layoutX="771.0" layoutY="515.0" prefHeight="39.0" prefWidth="279.0" promptText="Nhập giá dịch vụ" styleClass="InputControll" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="132.2" AnchorPane.rightAnchor="145.00000000000006">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="ServiceIDTextField" layoutX="243.0" layoutY="515.0" prefHeight="39.0" prefWidth="279.0" promptText="Nhập mã dịch vụ" styleClass="InputControll" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="132.19999999999993">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="126.0" layoutY="455.0" prefHeight="22.0" prefWidth="98.0" text="Chọn mã tòa *" textFill="#127357" AnchorPane.bottomAnchor="209.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="chooseTownComboBox1" layoutX="242.0" layoutY="447.0" prefHeight="39.0" prefWidth="279.0" promptText="Chọn tòa nhà" style="-fx-font-size: 14;" styleClass="InputControll" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="200.2" />
+                                    <Text fill="RED" layoutX="73.0" layoutY="661.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(*) Thông tin bắt buộc" AnchorPane.bottomAnchor="21.635351562499977">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="chooseTypeService" layoutX="770.0" layoutY="446.0" prefHeight="39.0" prefWidth="279.0" promptText="Chọn loại dịch vụ" style="-fx-font-size: 14;" styleClass="InputControll" stylesheets="@../designCSS/MainCSS.css" AnchorPane.bottomAnchor="201.2" AnchorPane.rightAnchor="146.00000000000006" />
+                                    <Label layoutX="653.0" layoutY="456.0" text="Loại dịch vụ *" textFill="#127357" AnchorPane.bottomAnchor="208.79999999999998" AnchorPane.rightAnchor="452.6">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
